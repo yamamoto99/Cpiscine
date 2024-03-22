@@ -1,22 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.h                                          :+:      :+:    :+:   */
+/*   ft_list_push_front.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: masayama <masayama@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/22 10:11:22 by masayama          #+#    #+#             */
-/*   Updated: 2024/03/22 21:09:37 by masayama         ###   ########.fr       */
+/*   Created: 2024/03/22 21:14:21 by masayama          #+#    #+#             */
+/*   Updated: 2024/03/22 21:14:37 by masayama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIST_H
-# define FT_LIST_H
-
-typedef struct s_list
-{
-	struct s_list	*next;
-	void			*data;
-}					t_list;
-
-#endif
+#include "ft_list.h"
+#include <stdlib.h>

@@ -1,41 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_sort.c                                       :+:      :+:    :+:   */
+/*   dict.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: masayama <masayama@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/21 14:56:07 by masayama          #+#    #+#             */
-/*   Updated: 2024/03/22 20:22:31 by masayama         ###   ########.fr       */
+/*   Created: 2024/03/23 07:40:28 by masayama          #+#    #+#             */
+/*   Updated: 2024/03/23 08:01:49 by masayama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// int	is_sort(int a, int b)
-// {
-// 	if (a == b)
-// 		return (0);
-// 	else
-// 		return (a - b);
-// }
+#ifndef RUSH_02_H
+# define RUSH_02_H
 
-int	ft_is_sort(int *tab, int length, int (*f)(int, int))
+typedef struct s_dict
 {
-	int	i;
+	char	*key;
+	char	*nbr;
+}			t_dict;
 
-	i = 0;
-	while (i < length - 1)
-	{
-		if (f(tab[i], tab[i + 1]) > 0)
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	int	a[] = {1, 2, 3, 4, 5};
-// 	printf("%d\n", ft_is_sort(a, 5, &is_sort));
-// }
+#endif
