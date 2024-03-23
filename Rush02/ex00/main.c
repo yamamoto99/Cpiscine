@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush_02.h                                          :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: masayama <masayama@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/23 07:40:28 by masayama          #+#    #+#             */
-/*   Updated: 2024/03/23 09:06:20 by masayama         ###   ########.fr       */
+/*   Created: 2024/03/23 08:46:15 by masayama          #+#    #+#             */
+/*   Updated: 2024/03/23 09:11:40 by masayama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RUSH_02_H
-# define RUSH_02_H
+#include "rush_02.h"
 
-typedef struct s_dict
+int main(int argc, char **argv)
 {
-	char	*key;
-	char	*nbr;
-}			t_dict;
-
-void	ft_putstr(char *str);
-
-#endif
+	if (argc == 2)
+		ft_putstr("argc = 2の時の処理を書く\n");
+	else if (argc == 3)
+		ft_putstr("argc = 3の時の処理を書く\n");
+	else
+		ft_putstr("Error\n");
+}

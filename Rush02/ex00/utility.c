@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush_02.h                                          :+:      :+:    :+:   */
+/*   utility.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: masayama <masayama@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/23 07:40:28 by masayama          #+#    #+#             */
-/*   Updated: 2024/03/23 09:06:20 by masayama         ###   ########.fr       */
+/*   Created: 2024/03/23 08:49:50 by masayama          #+#    #+#             */
+/*   Updated: 2024/03/23 08:50:31 by masayama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RUSH_02_H
-# define RUSH_02_H
+#include<unistd.h>
 
-typedef struct s_dict
+void	ft_putchr(char c)
 {
-	char	*key;
-	char	*nbr;
-}			t_dict;
+	write(1, &c, 1);
+}
 
-void	ft_putstr(char *str);
-
-#endif
+void	ft_putstr(char *str)
+{
+	while (*str)
+	{
+		ft_putchr(*str);
+		str++;
+	}
+}
