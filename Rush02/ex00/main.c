@@ -6,7 +6,7 @@
 /*   By: masayama <masayama@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 08:46:15 by masayama          #+#    #+#             */
-/*   Updated: 2024/03/23 09:38:19 by masayama         ###   ########.fr       */
+/*   Updated: 2024/03/23 10:45:43 by masayama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,5 @@ int main(int argc, char **argv)
 	else
 		ft_putstr("Error\n");
 	(void)argv;
+	file_to_struct();
 }
