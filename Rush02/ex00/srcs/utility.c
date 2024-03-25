@@ -6,13 +6,13 @@
 /*   By: masayama <masayama@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 08:49:50 by masayama          #+#    #+#             */
-/*   Updated: 2024/03/23 11:12:02 by masayama         ###   ########.fr       */
+/*   Updated: 2024/03/24 11:34:19 by masayama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include "rush_02.h"
 
-void	ft_putchr(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
@@ -21,7 +21,7 @@ void	ft_putstr(char *str)
 {
 	while (*str)
 	{
-		ft_putchr(*str);
+		ft_putchar(*str);
 		str++;
 	}
 }
