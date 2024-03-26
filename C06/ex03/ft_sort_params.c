@@ -6,7 +6,7 @@
 /*   By: masayama <masayama@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 11:19:52 by masayama          #+#    #+#             */
-/*   Updated: 2024/03/15 20:13:18 by masayama         ###   ########.fr       */
+/*   Updated: 2024/03/26 18:19:37 by masayama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ int	ft_strcmp(char *s1, char *s2)
 		return (*s1 - *s2);
 }
 
-void	swaps(char *a, char *b)
+void	swaps(char **a, char **b)
 {
-	char	z;
+	char	*z;
 
 	z = *a;
 	*a = *b;
@@ -60,7 +60,7 @@ int	main(int argc, char **argv)
 		{
 			if (ft_strcmp(argv[j], argv[j + 1]) > 0)
 			{
-				swaps(argv[j], argv[j + 1]);
+				swaps(&argv[j], &argv[j + 1]);
 			}
 			j++;
 		}
