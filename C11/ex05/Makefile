@@ -6,23 +6,28 @@
 #    By: masayama <masayama@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/20 07:26:13 by masayama          #+#    #+#              #
-#    Updated: 2024/03/27 11:10:07 by masayama         ###   ########.fr        #
+#    Updated: 2024/03/28 17:28:12 by masayama         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
 CFLAG = -Wall -Wextra -Werror
 NAME = do-op
-SRCS =	
+SRCS =	srcs/main.c \
+		srcs/check_operator.c \
+		srcs/culc.c \
+		srcs/ft_atoi.c \
+		srcs/ft_putnbr.c \
+		srcs/ft_strlen.c
 OBJS = $(SRCS:%.c=%.o)
 INCLUDE = -I./includes
 
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	ar rc $(NAME) $(OBJS)
+	$(CC) $(CFLAGS) $(INCLUDE) $(OBJS) -o $(NAME)
 
-$(OBJS) : $(SRCS)
+%.o : %.c
 	$(CC) $(CFLAG) $(INCLUDE) -c $< -o $@
 
 clean :

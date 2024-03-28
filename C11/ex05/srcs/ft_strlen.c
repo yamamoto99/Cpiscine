@@ -1,17 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: masayama <masayama@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/27 11:18:21 by masayama          #+#    #+#             */
-/*   Updated: 2024/03/27 17:25:26 by masayama         ###   ########.fr       */
+/*   Created: 2024/03/11 00:18:32 by masayama          #+#    #+#             */
+/*   Updated: 2024/03/28 17:13:07 by masayama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	main(int argc, char **argv)
+int	ft_strlen(char *str)
 {
-	if (argc != 4)
-		return (0);
+	int	len;
+
+	len = 0;
+	while (*str++ != 0)
+		len++;
+	return (len);
 }
