@@ -12,7 +12,8 @@
 
 int	is_alphanumeric_character(char c)
 {
-	if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z') || ('0' <= c && c <= '9'))
+	if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z') || ('0' <= c
+			&& c <= '9'))
 		return (1);
 	return (0);
 }
@@ -43,21 +44,20 @@ char	*ft_strcapitalize(char *str)
 	{
 		if (!is_alphanumeric_character(str[i]))
 		{
-			i++;
-			if ('a' <= str[i] && str[i] <= 'z')
-				str[i] -= 32;
-			i++;
+			if ('a' <= str[i + 1] && str[i + 1] <= 'z')
+				str[i + 1] -= 32;
 		}
 		i++;
 	}
 	return (str);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int	main(void)
-{
-	char str[] = "[989|/8~_Z[%Y)C[0&GY<AF4pu}IBVcK*T";
-	printf("%s\n", str);
-	printf("%s\n", ft_strcapitalize(str));
-}
+// int	main(void)
+// {
+// 	char str[] = "salut, comment tu vas ? 
+// 	42mots quaRAnte-deux; cinquante+et+un";
+// 	printf("%s\n", str);
+// 	printf("%s\n", ft_strcapitalize(str));
+// }
