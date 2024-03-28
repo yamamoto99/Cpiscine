@@ -10,34 +10,54 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcapitalize(char *str)
+int	is_alphanumeric_character(char c)
+{
+	if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z') || ('0' <= c && c <= '9'))
+		return (1);
+	return (0);
+}
+
+char	*ft_strlowcase(char *str)
 {
 	char	*str_head;
 
 	str_head = str;
-	if ('a' <= *str && *str <= 'z')
-		*str++ -= 32;
 	while (*str != 0)
 	{
-		if (!(('a' <= *str && *str <= 'z') || ('0' <= *str && *str <= '9')))
-		{
-			str++;
-			if ('a' <= *str && *str <= 'z')
-				*str++ -= 32;
-		}
-		else if ('A' <= *str && *str <= 'Z')
-			*str++ += 32;
-		else
-			str++;
+		if ('A' <= *str && *str <= 'Z')
+			*str += 32;
+		str++;
 	}
 	return (str_head);
 }
 
-// #include <stdio.h>
+char	*ft_strcapitalize(char *str)
+{
+	int	i;
 
-// int	main(void)
-// {
-// 	char str[] = "42mots quarante-deux; cinquante+et+un";
-// 	printf("%s\n", str);
-// 	printf("%s\n", ft_strcapitalize(str));
-// }
+	i = 0;
+	str = ft_strlowcase(str);
+	if ('a' <= str[i] && str[i] <= 'z')
+		str[i] -= 32;
+	while (str[i])
+	{
+		if (!is_alphanumeric_character(str[i]))
+		{
+			i++;
+			if ('a' <= str[i] && str[i] <= 'z')
+				str[i] -= 32;
+			i++;
+		}
+		i++;
+	}
+	return (str);
+}
+
+#include <stdio.h>
+
+int	main(void)
+{
+	char str[] = "[989|/8~_Z[%Y)C[0&GY<AF4pu}IBVcK*T";
+	printf("%s\n", str);
+	printf("%s\n", ft_strcapitalize(str));
+}
